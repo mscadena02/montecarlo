@@ -1,0 +1,44 @@
+body {
+  background: #000080;
+  color: #fff;
+  padding: 25px;
+  font-family: 'Inconsolata', monospace;
+}
+a {
+  text-decoration: none; 
+  color: inherit;         /* hereda el color del padre, quita el azul */ 
+}
+canvas {
+    
+    /*background-color: #FFFFFF;*/
+    border: 2px solid #333333;
+    border-radius: 8px;
+     /* Sombra para resaltar el lienzo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+
+    display: block;
+    margin: 0 auto;
+}
+#controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#resultado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+#foto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#numPuntos {
+  accent-color: yellow;
+}
+/*font-family: sans-serif;*/

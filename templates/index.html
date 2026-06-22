@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Monte Carlo Simulations</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" >
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <!--<link href="style.css" rel="stylesheet">-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+<h1>Sections</h1>
+<nav> 
+   <ul>
+      <li><a href="#History">History</a></li>
+      <li><a href="#How it works?">How it works?</a></li>
+      <li><a href="#Applications">Applications</a></li>
+      <li><a href="#Estimation of π">Estimation of π</a></li>
+    </ul>
+  </nav>
+</header>
+  <h1>Monte Carlo Simulations</h1>
+  <section id="History">
+  <h2>History</h2>
+  <p>Also known as Monte Carlo methods, they represent a broad class of computational algorithms or techniques based on random sampling for the aproximation of numerical problems. It was first conjured by mathematicians Stanislaw Ulam and Jhon von Neuman in 1944 as part of the estudies that led to the atomic bomb. Ulam first got the idea while playing cards: A method to solve complex ecuations in the study of neutrons. The concept was similar to generating the numbers using a roulette wheel, hence its name. The theory was later consolidated in the work of mathematicians Harris and Herman Kahn.</p>
+  <div id="foto">
+  <img src="https://cdn.lanl.gov/244a4ea3-c831-4322-853e-2bb2d4b24b02.png" alt="Stanislaw Ulam and Jhon von Neuman" width="250">
+  </div>
+  </section>
+  <section id="How it works?">
+  <h2>How it works?</h2>
+  <p> A Monte Carlo simulation works by representing uncertain inputs as probability distributions rather than fixed values. The simulations are run using a random number generator that draws a sample from each input distribution. This process is repeated hundreds or thousands of times, using randomly sampled values ​​for each input.
+
+Each simulation iteration represents a possible outcome. The results gathered across these simulations reveal the full range and probability of outcomes the system can produce, which are most- or least-likely, and which input parameters carry the greatest risk.</p>
+</section>
+  <section id="Applications">
+  <h2>Areas of application (with examples)</h2>
+ <ul>
+  <li>Finance
+    <ul>
+      <li>Value at Risk (VaR):Assesses the probability of losses in investments.</li>
+      <li>Asset valuation: Used for pricing financial options and derivatives (e.g., the Black-Scholes model).</li>
+      <li>Investment analysis: Simulates multiple cash flow scenarios to determine the profitability and risk of business projects.</li>
+    </ul>
+  </li>
+  <li>Project Management
+    <ul>
+      <li>Timeline estimation: Simulates the total duration of a project by combining the variability of individual tasks (e.g., using the PERT method).</li>
+      <li>Budget analysis: Models material and labor costs to anticipate overruns.</li>
+    </ul>
+  </li>
+  <li>Engineering and Manufacturing
+    <ul>
+      <li>Tolerance analysis: Evaluates how variation in part dimensions affects the final assembly.</li>
+      <li>Structural reliability: Calculates the probability that a bridge, building, or mechanical component will fail under variable stress loads.</li>
+    </ul>
+  </li>
+  <li>Science and Medicine
+    <ul>
+      <li>Physics and Chemistry: Modeling of complex systems, radiation transport, and thermodynamics.</li>
+      <li>Radiotherapy: Simulates how radiation interacts with body tissues to optimize cancer treatments.</li>
+      <li>Epidemiology: Simulates the spread of infectious diseases and the effectiveness of different public health policies.</li>
+    </ul>
+  </li>
+  <li>Logistics and Operations
+    <ul>
+      <li>Supply chain optimization: Models uncertain product demand, shipping times, and production bottlenecks.</li>
+      <li>Queuing theory: Simulates wait times in systems with random arrivals, such as airports, hospitals, or customer service.</li>
+    </ul>
+  </li>
+  <li>Pure Mathematics and Computing
+    <ul>
+      <li>Numerical integration: Solves highly complex definite integrals that are difficult or impossible to compute analytically.</li>
+      <li>Area calculation: Estimates areas or perimeters of irregular geometric figures by randomly casting virtual points (e.g., estimating the value of π).</li>
+    </ul>
+  </li>
+</ul>
+</section>
+<section id="Estimation of π">
+<h2>Estimation of π</h2>
+<p>This small simulation allows the user to visualize the estimation of π trough the random selection of points (x,y) in a circle inside a square. The more points the user selects, the better is the estimation.</p>
+  <canvas id="canvas" width="500" height="500"></canvas>
+
+  <div id="controles">
+  <label for="numPuntos">Number of points:</label>
+  <input type="range" id="numPuntos" min="10" max="15000" value="15000" step="100" />
+  <span id="valorPuntos">15000 points</span>
+  <button id="btnIniciar">Start!</button>
+  <button id="btnReiniciar">Restart</button>
+  </div>
+  <div id="resultado">π ≈ ?</div>
+  </section>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <!--<script src="script.js"></script>-->
+</body>
+</html>
